@@ -64,8 +64,8 @@ sub replace_strings {
 
 sub main {
     # DTSTTCPW implementation
-    my $from_str = shift;
-    my $to_str = shift;
+    my $from_str = shift @ARGV;
+    my $to_str = shift @ARGV;
     while (<>) {
         print replace_strings($_, $from_str, $to_str);
     }
